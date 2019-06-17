@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3A04B2C522B7F4DA007B34C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B2C422B7F4DA007B34C8 /* AppDelegate.swift */; };
-		3A04B2C722B7F4DA007B34C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B2C622B7F4DA007B34C8 /* ViewController.swift */; };
 		3A04B2CA22B7F4DA007B34C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A04B2C822B7F4DA007B34C8 /* Main.storyboard */; };
 		3A04B2CC22B7F4DB007B34C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A04B2CB22B7F4DB007B34C8 /* Assets.xcassets */; };
 		3A04B2CF22B7F4DB007B34C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A04B2CD22B7F4DB007B34C8 /* LaunchScreen.storyboard */; };
+		3A04B2D822B7FBF1007B34C8 /* SettingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B2D722B7FBF1007B34C8 /* SettingListTableViewController.swift */; };
+		3A04B2DB22B7FC25007B34C8 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B2DA22B7FC25007B34C8 /* SettingTableViewCell.swift */; };
+		3A04B2DE22B7FC50007B34C8 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B2DD22B7FC50007B34C8 /* Setting.swift */; };
+		3A04B2E122B7FC61007B34C8 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04B2E022B7FC61007B34C8 /* SettingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A04B2C122B7F4DA007B34C8 /* Settings27.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Settings27.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A04B2C422B7F4DA007B34C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A04B2C622B7F4DA007B34C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A04B2C922B7F4DA007B34C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A04B2CB22B7F4DB007B34C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A04B2CE22B7F4DB007B34C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A04B2D022B7F4DB007B34C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A04B2D722B7FBF1007B34C8 /* SettingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListTableViewController.swift; sourceTree = "<group>"; };
+		3A04B2DA22B7FC25007B34C8 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		3A04B2DD22B7FC50007B34C8 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		3A04B2E022B7FC61007B34C8 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		3A04B2C322B7F4DA007B34C8 /* Settings27 */ = {
 			isa = PBXGroup;
 			children = (
-				3A04B2C422B7F4DA007B34C8 /* AppDelegate.swift */,
-				3A04B2C622B7F4DA007B34C8 /* ViewController.swift */,
+				3A04B2DF22B7FC53007B34C8 /* Models */,
+				3A04B2E222B7FC65007B34C8 /* Model Controller */,
+				3A04B2D922B7FBF5007B34C8 /* View Controllers */,
+				3A04B2D622B7F9F9007B34C8 /* Resources */,
+			);
+			path = Settings27;
+			sourceTree = "<group>";
+		};
+		3A04B2D622B7F9F9007B34C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				3A04B2C822B7F4DA007B34C8 /* Main.storyboard */,
+				3A04B2C422B7F4DA007B34C8 /* AppDelegate.swift */,
 				3A04B2CB22B7F4DB007B34C8 /* Assets.xcassets */,
 				3A04B2CD22B7F4DB007B34C8 /* LaunchScreen.storyboard */,
 				3A04B2D022B7F4DB007B34C8 /* Info.plist */,
 			);
-			path = Settings27;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A04B2D922B7FBF5007B34C8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A04B2D722B7FBF1007B34C8 /* SettingListTableViewController.swift */,
+				3A04B2DC22B7FC30007B34C8 /* CustomViews */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3A04B2DC22B7FC30007B34C8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				3A04B2DA22B7FC25007B34C8 /* SettingTableViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		3A04B2DF22B7FC53007B34C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A04B2DD22B7FC50007B34C8 /* Setting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A04B2E222B7FC65007B34C8 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A04B2E022B7FC61007B34C8 /* SettingController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A04B2C722B7F4DA007B34C8 /* ViewController.swift in Sources */,
+				3A04B2E122B7FC61007B34C8 /* SettingController.swift in Sources */,
+				3A04B2DB22B7FC25007B34C8 /* SettingTableViewCell.swift in Sources */,
+				3A04B2D822B7FBF1007B34C8 /* SettingListTableViewController.swift in Sources */,
+				3A04B2DE22B7FC50007B34C8 /* Setting.swift in Sources */,
 				3A04B2C522B7F4DA007B34C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = Settings27/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Settings27/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = Settings27/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Settings27/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
