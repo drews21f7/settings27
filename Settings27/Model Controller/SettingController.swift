@@ -25,5 +25,4 @@ class SettingController {
     func toggleIsOn(for setting: Setting) {
         setting.isOn = !setting.isOn
     }
-
 }

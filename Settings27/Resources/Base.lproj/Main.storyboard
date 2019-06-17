@@ -13,12 +13,12 @@
         <scene sceneID="9Ot-7c-qcw">
             <objects>
                 <tableViewController id="v8G-qq-lrh" customClass="SettingListTableViewController" customModule="Settings27" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C5o-pO-A0f">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C5o-pO-A0f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="146" id="Vfl-P3-69G">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" rowHeight="146" id="Vfl-P3-69G" customClass="SettingTableViewCell" customModule="Settings27" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="146"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vfl-P3-69G" id="MC0-Cp-wSd">
@@ -46,7 +46,6 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.41113698009999999" green="1" blue="0.84299987119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="eR1-yf-sPM" firstAttribute="leading" secondItem="MC0-Cp-wSd" secondAttribute="leading" constant="8" id="2qy-h8-aaw"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="U9c-L1-sdS" secondAttribute="trailing" constant="8" id="Ld3-C9-X30"/>
@@ -56,6 +55,11 @@
                                         <constraint firstItem="U9c-L1-sdS" firstAttribute="centerY" secondItem="MC0-Cp-wSd" secondAttribute="centerY" id="jC7-UR-Dsg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="settingIconImageView" destination="eR1-yf-sPM" id="B3S-Je-JLE"/>
+                                    <outlet property="settingNameLabel" destination="CKk-0j-YY5" id="sFK-gq-uvo"/>
+                                    <outlet property="settingSwitch" destination="euM-nF-23B" id="4VS-Re-8KN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
