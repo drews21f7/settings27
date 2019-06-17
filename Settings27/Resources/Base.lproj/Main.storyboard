@@ -42,6 +42,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="euM-nF-23B">
                                                     <rect key="frame" x="191.5" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="settingCellToggle:" destination="Vfl-P3-69G" eventType="valueChanged" id="Ii9-8i-0ZX"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>

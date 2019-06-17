@@ -8,23 +8,25 @@
 
 import UIKit
 
+//Define the protocol
+protocol SettingCellDelegate: class {
+    func settingSwitchTapped(for cell: SettingTableViewCell)
+}
+
 class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var settingIconImageView: UIImageView!
     @IBOutlet weak var settingNameLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
-    
+    //Define the delegate
+    weak var cellDelegate: SettingCellDelegate?
     func updateViews(with setting: Setting) {
         settingIconImageView.image = setting.icon
         settingNameLabel.text = setting.name
         settingSwitch.isOn = setting.isOn
         
-//        if settingSwitch.isOn == true {
-//            self.backgroundColor = UIColor.cyan
-//        } else {
-//            self.backgroundColor = UIColor.white
-//        }
-        
         self.backgroundColor = settingSwitch.isOn ? .cyan: .white
     }
-
+    @IBAction func settingCellToggle(_ sender: Any) {
+        cellDelegate?.settingSwitchTapped(for: self)
+    }
 }
